@@ -1,161 +1,180 @@
+/* Reset default browser margin and set global styles */
 body
 {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #121212;
-    color: #EAEAEA;
+    margin: 0; /* Removes default page margin */
+    font-family: Arial, sans-serif; /* Sets the font for the whole site */
+    background-color: #121212; /* Dark background for night mode look */
+    color: #EAEAEA; /* Light text color for contrast */
 }
 
+/* Main page container */
 .container
 {
-    width: 90%;
-    margin: auto;
+    width: 90%; /* Makes content slightly narrower than full screen */
+    margin: auto; /* Centers the container horizontally */
 }
 
-/* top layout */
+/* ===== TOP SECTION LAYOUT ===== */
 
 .top
 {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-top: 20px;
+    display: flex; /* Uses flexbox layout */
+    align-items: center; /* Vertically centers items */
+    justify-content: space-between; /* Spaces items evenly */
+    margin-top: 20px; /* Adds space above the top section */
 }
 
+/* Website title/header box */
 .heading
 {
-    background-color: #B22222;
-    color: white;
-    padding: 18px;
-    border-radius: 12px;
-    box-shadow: 0 6px 15px rgba(0,0,0,0.6);
-    flex: 2;
-    transition: transform 0.3s;
+    background-color: #B22222; /* Dark red background */
+    color: white; /* White text */
+    padding: 18px; /* Space inside the box */
+    border-radius: 12px; /* Rounded corners */
+    box-shadow: 0 6px 15px rgba(0,0,0,0.6); /* Shadow for depth */
+    flex: 2; /* Takes 2 parts of the flex layout */
+    transition: transform 0.3s; /* Smooth hover animation */
 }
 
+/* Small hover lift effect */
 .heading:hover
 {
-    transform: translateY(-3px);
+    transform: translateY(-3px); /* Moves box slightly upward */
 }
 
-/* navigation buttons */
+/* ===== NAVIGATION BAR ===== */
 
 .nav
 {
-    background-color: #1E1E1E;
-    padding: 14px;
-    border-radius: 12px;
-    flex: 3;
-    display: flex;
-    gap: 12px;
-    box-shadow: 0 6px 15px rgba(0,0,0,0.6);
-    margin-left: 5px;
+    background-color: #1E1E1E; /* Dark grey background */
+    padding: 14px; /* Space inside nav bar */
+    border-radius: 12px; /* Rounded corners */
+    flex: 3; /* Takes more space than heading */
+    display: flex; /* Flex layout for buttons */
+    gap: 12px; /* Space between buttons */
+    box-shadow: 0 6px 15px rgba(0,0,0,0.6); /* Shadow */
+    margin-left: 5px; /* Small gap from heading */
 }
 
+/* Navigation links styled like buttons */
 .nav a
 {
-    background-color: #000000;
-    color: #C9A227;
-    padding: 10px 16px;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: transform 0.2s, background-color 0.2s;
+    background-color: #000000; /* Black button background */
+    color: #C9A227; /* Gold text color */
+    padding: 10px 16px; /* Button size */
+    border-radius: 8px; /* Rounded button edges */
+    text-decoration: none; /* Removes underline */
+    font-weight: bold; /* Bold text */
+    transition: transform 0.2s, background-color 0.2s; /* Smooth animation */
 }
 
+/* Button hover effect */
 .nav a:hover
 {
-    background-color: #B22222;
-    transform: scale(1.1);
-    color: white;
+    background-color: #B22222; /* Turns red on hover */
+    transform: scale(1.1); /* Slight enlargement */
+    color: white; /* Text turns white */
 }
 
-/* logo */
+/* ===== LOGO STYLING ===== */
 
 .logo
 {
-    background-color: #1E1E1E;
-    width: 110px;
-    height: 110px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 6px 15px rgba(0,0,0,0.6);
-    transition: transform 0.3s;
-    margin-left: 5px;
+    background-color: #1E1E1E; /* Dark circle background */
+    width: 110px; /* Circle width */
+    height: 110px; /* Circle height */
+    border-radius: 50%; /* Makes it a circle */
+    display: flex; /* Flexbox for centering logo */
+    align-items: center; /* Vertical center */
+    justify-content: center; /* Horizontal center */
+    box-shadow: 0 6px 15px rgba(0,0,0,0.6); /* Shadow */
+    transition: transform 0.3s; /* Smooth hover animation */
+    margin-left: 5px; /* Space from nav */
 }
+
+/* Actual image inside logo circle */
 #logo
 {
-    width: 60px;
+    width: 60px; /* Logo image size */
 }
 
+/* Logo hover effect */
 .logo:hover
 {
-    transform: scale(1.05);
+    transform: scale(1.05); /* Slight zoom when hovered */
 }
 
+/* ===== MAIN CONTENT LAYOUT ===== */
+
 .main{
-        display: flex;
-        margin-top: 30px;
+        display: flex; /* Creates two-column layout */
+        margin-top: 30px; /* Space above main content */
     }
 
-    .left{
-        flex: 3;
+/* Left content area */
+.left{
+        flex: 3; /* Takes most of the page width */
     }
 
-    .banner{
-        background-color: #1E1E1E;
-        height: 220px;
-        border-radius: 16px;
-        padding: 20px;
-        margin-bottom: 25px;
-        box-shadow: 0 8px 20px rgba(0,0,0,0.7);
-        transition: transform 0.3s;
-    }
-    #banner{
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        border-radius: 12px;
+/* Banner section */
+.banner{
+        background-color: #1E1E1E; /* Dark background */
+        height: 220px; /* Fixed height */
+        border-radius: 16px; /* Rounded corners */
+        padding: 20px; /* Space inside */
+        margin-bottom: 25px; /* Space below banner */
+        box-shadow: 0 8px 20px rgba(0,0,0,0.7); /* Deep shadow */
+        transition: transform 0.3s; /* Hover animation */
     }
 
-    .banner:hover{
-        transform: translateY(-4px);
+/* Banner image settings */
+#banner{
+        width: 100%; /* Makes image fill container */
+        height: 100%; /* Matches container height */
+        object-fit: cover; /* Crops image properly */
+        border-radius: 12px; /* Rounded edges */
     }
 
-    .subheading{
-        background-color: #B22222;
-        color: white;
-        padding: 14px;
-        border-radius: 12px;
-        margin-bottom: 20px;
-        box-shadow: 0 6px 15px rgba(0,0,0,0.6);
+/* Banner hover effect */
+.banner:hover{
+        transform: translateY(-4px); /* Slight lift */
     }
 
-    .info{
-        background-color: #1E1E1E;
-        padding: 22px;
-        border-radius: 16px;
-        box-shadow: 0 8px 20px rgba(0,0,0,0.7);
+/* Subheading boxes */
+.subheading{
+        background-color: #B22222; /* Red header */
+        color: white; /* White text */
+        padding: 14px; /* Inner spacing */
+        border-radius: 12px; /* Rounded edges */
+        margin-bottom: 20px; /* Space below */
+        box-shadow: 0 6px 15px rgba(0,0,0,0.6); /* Shadow */
     }
 
-    /* sidebar */
-
-    .sidebar{
-        flex: 1;
-        margin-left: 25px;
+/* Information content section */
+.info{
+        background-color: #1E1E1E; /* Dark background */
+        padding: 22px; /* Inner spacing */
+        border-radius: 16px; /* Rounded edges */
+        box-shadow: 0 8px 20px rgba(0,0,0,0.7); /* Shadow for depth */
     }
 
-    .funfacts{
-        background-color: #1E1E1E;
-        padding: 20px;
-        border-radius: 16px;
-        box-shadow: 0 8px 20px rgba(0,0,0,0.7);
-        transition: transform 0.3s;
+/* ===== SIDEBAR ===== */
+
+.sidebar{
+        flex: 1; /* Smaller column on the right */
+        margin-left: 25px; /* Space between main content and sidebar */
     }
 
-    .funfacts:hover{
-        transform: translateY(-4px);
+/* Fun facts card */
+.funfacts{
+        background-color: #1E1E1E; /* Dark background */
+        padding: 20px; /* Inner spacing */
+        border-radius: 16px; /* Rounded corners */
+        box-shadow: 0 8px 20px rgba(0,0,0,0.7); /* Shadow */
+        transition: transform 0.3s; /* Hover animation */
     }
 
+/* Fun facts hover effect */
+.funfacts:hover{
+        transform: translateY(-4px); /* Slight lift */
+    }
