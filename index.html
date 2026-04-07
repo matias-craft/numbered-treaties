@@ -1,96 +1,102 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Treaty 7</title>
-        <link rel="stylesheet" href="style-sheet.css">
-    </head>
-<body>
-
-<div class="container">
-
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Treaty 7</title>
+    <link rel="stylesheet" href="style-sheet.css" />
+  </head>
+  <body>
     <header class="top">
+      <!-- This is correct -->
+      <div class="heading">
+        <h1>Treaty 7</h1>
+        <p>Numbered treaty signed in southern Alberta in 1877.</p>
+      </div>
 
-        <div class="heading">
-            <h1>Treaty 7</h1>
-            <p>Numbered treaty signed in southern Alberta in 1877.</p>
-        </div>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="history.html">History</a>
+        <a href="firstnations.html">First Nations</a>
+        <a href="#">Impact</a>
+      </nav>
 
-        <nav class="nav">
-            <a href="index.html">Home</a>
-            <a href="history.html">History</a>
-            <a href="firstnations.html">First Nations</a>
-            <a href="#">Impact</a>
-        </nav>
-
-        <div class="logo">
-            <img src="images/treaty7logo.png" alt="Logo Image" id="logo">
-        </div>
-
+      <!-- This one is correct. -->
+      <div id="logo">
+        <img src="images/treaty7logo.png" alt="Logo Image" />
+      </div>
     </header>
 
-    <div class="main">
-
-        <div class="left">
-            <div class="banner" style="height: 300px;">
-                <img src="images/Treaty7banner.png" alt="Banner Image" id="banner">
-            </div>
-            <div class="subheading">
-                <h2>About Treaty 7</h2>
-            </div>
-            <div class="info">
-                <p>
-                Treaty 7 formed in 1877 between several First Nations and the Government of Canada. 
-                The treaty created an agreement for land sharing and future relations.
-                </p>
-                <p>
-                First Nations agreed to share large areas of land with settlers. 
-                In return the government promised reserve land, payments, farming tools, and support.
-                </p>
-                <h3>Key Details</h3>
-                <ul>
-                    <li>Signed September 22, 1877.</li>
-                    <br/>
-                    <li>Location: Blackfoot Crossing in southern Alberta.</li>
-                    <br/>
-                    <li>Part of the numbered treaty system in Canada.</li>
-                    <br/>
-                    <li>Created agreements between First Nations and the Canadian government.</li>
-                </ul>
-                <h3>Nations Involved</h3>
-                <ul>
-                    <li>Siksika Nation</li>
-                    <br/>
-                    <li>Kainai Nation</li>
-                    <br/>
-                    <li>Piikani Nation</li>
-                    <br/>
-                    <li>Stoney Nakoda Nations</li>
-                    <br/>
-                    <li>Tsuut'ina Nation</li>
-                </ul>
-                <p>
-                These nations continue to live in Alberta today. 
-                Treaty rights remain part of Canadian law and influence government decisions.
-                </p>
-            </div>
+    <main>
+      <!-- Change this to section -->
+      <section class="left">
+        <!-- This div also makes sense -->
+        <div class="banner" style="height: 300px">
+          <img src="images/Treaty7banner.png" alt="Banner Image" id="banner" />
         </div>
-        <aside class="sidebar">
-            <div class="funfacts">
-                <h3>Fun Facts</h3>
-                <ul>
-                    <li>Treaty 7 is one of eleven numbered treaties in Canada.</li>
-                    <br/>
-                    <li>The agreement took place near the Bow River.</li>
-                    <br/>
-                    <li>Blackfoot Crossing is now a historic site and museum.</li>
-                    <br/>
-                    <li>The treaty still affects land rights and government policy today.</li>
-                </ul>
-            </div>
-        </aside>
-    </div>
-</div>
-</body>
+        <!-- Based on styling, this also makes sense -->
+        <div class="subheading">
+          <h2>About Treaty 7</h2>
+        </div>
+        <!-- This div makes sense -->
+        <div class="info">
+          <p>
+            Treaty 7 formed in 1877 between several First Nations and the
+            Government of Canada. The treaty created an agreement for land
+            sharing and future relations.
+          </p>
+          <p>
+            First Nations agreed to share large areas of land with settlers. In
+            return the government promised reserve land, payments, farming
+            tools, and support.
+          </p>
+          <h3>Key Details</h3>
+          <ul>
+            <li>Signed September 22, 1877.</li>
+            <br />
+            <li>Location: Blackfoot Crossing in southern Alberta.</li>
+            <br />
+            <li>Part of the numbered treaty system in Canada.</li>
+            <br />
+            <li>
+              Created agreements between First Nations and the Canadian
+              government.
+            </li>
+          </ul>
+          <h3>Nations Involved</h3>
+          <ul>
+            <li>Siksika Nation</li>
+            <br />
+            <li>Kainai Nation</li>
+            <br />
+            <li>Piikani Nation</li>
+            <br />
+            <li>Stoney Nakoda Nations</li>
+            <br />
+            <li>Tsuut'ina Nation</li>
+          </ul>
+          <p>
+            These nations continue to live in Alberta today. Treaty rights
+            remain part of Canadian law and influence government decisions.
+          </p>
+        </div>
+      </section>
+      <aside class="sidebar">
+        <div class="funfacts">
+          <h3>Fun Facts</h3>
+          <ul>
+            <li>Treaty 7 is one of eleven numbered treaties in Canada.</li>
+            <br />
+            <li>The agreement took place near the Bow River.</li>
+            <br />
+            <li>Blackfoot Crossing is now a historic site and museum.</li>
+            <br />
+            <li>
+              The treaty still affects land rights and government policy today.
+            </li>
+          </ul>
+        </div>
+      </aside>
+    </main>
+  </body>
 </html>
