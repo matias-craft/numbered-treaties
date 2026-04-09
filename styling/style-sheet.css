@@ -26,7 +26,7 @@ main {
 
 /* Website title/header box */
 .heading {
-  background-color: #ff0000; /* Dark red background */
+  background-color: #cb1605; /* Dark red background */
   color: white; /* White text */
   padding: 18px; /* Space inside the box */
   border-radius: 12px; /* Rounded corners */
@@ -55,8 +55,8 @@ main {
 
 /* Navigation links styled like buttons */
 .nav a {
-  background-color: #ff0000; /* Black button background */
-  color: #000000; /* Gold text color */
+  background-color: #cb1605; /* Dark red button background */
+  color: #ffffff; /* White text color */
   padding: 10px 16px; /* Button size */
   border-radius: 8px; /* Rounded button edges */
   text-decoration: none; /* Removes underline */
@@ -68,7 +68,7 @@ main {
 
 /* Button hover effect */
 .nav a:hover {
-  background-color: #b22222; /* Turns red on hover */
+  background-color: #961c1c; /* Turns red on hover */
   transform: scale(1.1); /* Slight enlargement */
   color: rgb(255, 255, 255); /* Text turns white */
 }
@@ -136,7 +136,7 @@ main {
 
 /* Subheading boxes */
 .subheading {
-  background-color: #ff0000; /* Red header */
+  background-color: #cb1605; /* Red header */
   color: white; /* White text */
   padding: 14px; /* Inner spacing */
   border-radius: 12px; /* Rounded edges */
