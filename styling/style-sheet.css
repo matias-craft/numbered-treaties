@@ -1,175 +1,184 @@
 /* Reset default browser margin and set global styles */
 body {
-  margin: 0; /* Removes default page margin */
-  font-family: Arial, sans-serif; /* Sets the font for the whole site */
-  background-color: oklch(
-    100% 0.00011 271.152
-  ); /* Dark background for night mode look */
-  color: #0e0e0e; /* Light text color for contrast */
+  margin: 0;
+  font-family: Arial, sans-serif;
+  /* Light background color - adjusted for better browser compatibility */
+  background-color: oklch(98% 0.01 271);
+  color: #0e0e0e;
+  line-height: 1.6; /* Improves readability */
 }
 
 /* Main page container */
 header,
 main {
-  width: 90%; /* Makes content slightly narrower than full screen */
-  margin: auto; /* Centers the container horizontally */
+  width: 90%;
+  max-width: 1200px; /* Prevents site from getting too wide on huge monitors */
+  margin: auto;
 }
 
 /* ===== TOP SECTION LAYOUT ===== */
 
 .top {
-  display: flex; /* Uses flexbox layout */
-  align-items: center; /* Vertically centers items */
-  justify-content: space-between; /* Spaces items evenly */
-  margin-top: 20px; /* Adds space above the top section */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+  gap: 15px; /* Adds consistent spacing between flex items */
 }
 
-/* Website title/header box */
 .heading {
-  background-color: #cb1605; /* Dark red background */
-  color: white; /* White text */
-  padding: 18px; /* Space inside the box */
-  border-radius: 12px; /* Rounded corners */
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.6); /* Shadow for depth */
-  flex: 2; /* Takes 2 parts of the flex layout */
-  transition: transform 0.3s; /* Smooth hover animation */
+  background-color: #cb1605;
+  color: white;
+  padding: 18px;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+  flex: 2;
+  transition: transform 0.3s;
 }
 
-/* Small hover lift effect */
+.heading h1,
+.heading p {
+  margin: 0; /* Removes default margins to keep box tight */
+}
+
 .heading:hover {
-  transform: translateY(-3px); /* Moves box slightly upward */
+  transform: translateY(-3px);
 }
 
 /* ===== NAVIGATION BAR ===== */
 
 .nav {
-  background-color: #f8f6f6; /* Dark grey background */
-  padding: 14px; /* Space inside nav bar */
-  border-radius: 12px; /* Rounded corners */
-  flex: 3; /* Takes more space than heading */
-  display: flex; /* Flex layout for buttons */
-  gap: 12px; /* Space between buttons */
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.6); /* Shadow */
-  margin-left: 5px; /* Small gap from heading */
+  background-color: #f8f6f6;
+  padding: 14px;
+  border-radius: 12px;
+  flex: 3;
+  display: flex;
+  gap: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
 }
 
-/* Navigation links styled like buttons */
 .nav a {
-  background-color: #cb1605; /* Dark red button background */
-  color: #ffffff; /* White text color */
-  padding: 10px 16px; /* Button size */
-  border-radius: 8px; /* Rounded button edges */
-  text-decoration: none; /* Removes underline */
-  font-weight: bold; /* Bold text */
+  background-color: #cb1605;
+  color: #ffffff;
+  padding: 10px 16px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
   transition:
     transform 0.2s,
-    background-color 0.2s; /* Smooth animation */
+    background-color 0.2s;
 }
 
-/* Button hover effect */
 .nav a:hover {
-  background-color: #961c1c; /* Turns red on hover */
-  transform: scale(1.1); /* Slight enlargement */
-  color: rgb(255, 255, 255); /* Text turns white */
+  background-color: #7a1717;
+  transform: scale(1.05);
 }
 
 /* ===== LOGO STYLING ===== */
 
 #logo {
-  background-color: #f8f6f6; /* Dark circle background */
-  width: 110px; /* Circle width */
-  height: 110px; /* Circle height */
-  border-radius: 50%; /* Makes it a circle */
-  display: flex; /* Flexbox for centering logo */
-  align-items: center; /* Vertical center */
-  justify-content: center; /* Horizontal center */
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.6); /* Shadow */
-  transition: transform 0.3s; /* Smooth hover animation */
-  margin-left: 5px; /* Space from nav */
+  background-color: #f8f6f6;
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s;
+  flex-shrink: 0; /* Prevents logo from squishing */
 }
 
-/* Actual image inside logo circle */
 #logo img {
-  width: 60px; /* Logo image size */
+  width: 70px;
+  height: auto;
 }
 
-/* Logo hover effect */
 #logo:hover {
-  transform: scale(1.05); /* Slight zoom when hovered */
+  transform: rotate(5deg) scale(1.05); /* Added a slight tilt for fun */
 }
 
 /* ===== MAIN CONTENT LAYOUT ===== */
 
 main {
-  display: flex; /* Creates two-column layout */
-  margin-top: 30px; /* Space above main content */
+  display: flex;
+  gap: 25px; /* Modern way to handle spacing between columns */
+  margin-top: 30px;
+  margin-bottom: 50px;
 }
 
-/* Left content area */
 .left {
-  flex: 3; /* Takes most of the page width */
+  flex: 3;
 }
 
-/* Banner section */
 .banner {
-  background-color: #f8f6f6; /* Dark background */
-  height: 220px; /* Fixed height */
-  border-radius: 16px; /* Rounded corners */
-  padding: 20px; /* Space inside */
-  margin-bottom: 25px; /* Space below banner */
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7); /* Deep shadow */
-  transition: transform 0.3s; /* Hover animation */
+  background-color: #f8f6f6;
+  height: 300px; /* Matched to your HTML height */
+  border-radius: 16px;
+  overflow: hidden; /* Ensures image doesn't bleed over rounded corners */
+  margin-bottom: 25px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s;
 }
 
-/* Banner image settings */
 #banner {
-  width: 100%; /* Makes image fill container */
-  height: 100%; /* Matches container height */
-  object-fit: cover; /* Crops image properly */
-  border-radius: 12px; /* Rounded edges */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-/* Banner hover effect */
 .banner:hover {
-  transform: translateY(-4px); /* Slight lift */
+  transform: translateY(-4px);
 }
 
-/* Subheading boxes */
 .subheading {
-  background-color: #cb1605; /* Red header */
-  color: white; /* White text */
-  padding: 14px; /* Inner spacing */
-  border-radius: 12px; /* Rounded edges */
-  margin-bottom: 20px; /* Space below */
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.6); /* Shadow */
-}
-
-/* Information content section */
-.info {
-  background-color: #f8f6f6; /* Dark background */
-  padding: 22px; /* Inner spacing */
-  border-radius: 16px; /* Rounded edges */
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7); /* Shadow for depth */
+  background-color: #cb1605;
+  color: white;
+  padding: 5px 20px;
+  border-radius: 12px;
   margin-bottom: 20px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
 }
 
-/* ===== SIDEBAR ===== */
-
-.sidebar {
-  flex: 1; /* Smaller column on the right */
-  margin-left: 25px; /* Space between main content and sidebar */
+.info {
+  background-color: #f8f6f6;
+  padding: 22px;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
-/* Fun facts card */
-.funfacts {
-  background-color: #f8f6f6; /* Dark background */
-  padding: 20px; /* Inner spacing */
-  border-radius: 16px; /* Rounded corners */
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7); /* Shadow */
-  transition: transform 0.3s; /* Hover animation */
+/* Space out list items now that <br> tags are gone */
+ul li {
+  margin-bottom: 12px;
 }
 
-/* Fun facts hover effect */
-.funfacts:hover {
-  transform: translateY(-4px); /* Slight lift */
+/* ===== SIDEBARS ===== */
+
+/* This container holds BOTH sidebars to stack them on the right */
+.sidebar-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+/* Applying styles to both sidebar classes */
+.sidebar,
+.sidebar1 {
+  flex: 1;
+}
+
+.funfacts,
+.geography {
+  background-color: #f8f6f6;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s;
+  height: 100%;
+}
+
+.funfacts:hover,
+.geography:hover {
+  transform: translateY(-4px);
 }
