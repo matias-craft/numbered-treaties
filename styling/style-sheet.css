@@ -1,4 +1,3 @@
-/* Reset default browser margin and set global styles */
 body {
   margin: 0;
   font-family: Arial, sans-serif;
@@ -12,7 +11,7 @@ body {
 header,
 main {
   width: 90%;
-  max-width: 1200px; /* Prevents site from getting too wide on huge monitors */
+  max-width: 75rem; /* Prevents site from getting too wide on huge monitors */
   margin: auto;
 }
 
@@ -22,16 +21,16 @@ main {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: 20px;
-  gap: 15px; /* Adds consistent spacing between flex items */
+  margin-top: 1.25em;
+  gap: 0.9375em; /* Adds consistent spacing between flex items */
 }
 
 .heading {
   background-color: #cb1605;
   color: white;
-  padding: 18px;
-  border-radius: 12px;
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+  padding: 1.125em;
+  border-radius: 0.75em;
+  box-shadow: 0 0.375em 0.9375em rgba(0, 0, 0, 0.3);
   flex: 2;
   transition: transform 0.3s;
 }
@@ -42,26 +41,26 @@ main {
 }
 
 .heading:hover {
-  transform: translateY(-3px);
+  transform: translateY(-0.1875em);
 }
 
 /* ===== NAVIGATION BAR ===== */
 
 .nav {
   background-color: #f8f6f6;
-  padding: 14px;
-  border-radius: 12px;
+  padding: 0.875em;
+  border-radius: 0.75em;
   flex: 3;
   display: flex;
-  gap: 12px;
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  gap: 0.75em;
+  box-shadow: 0 0.375em 0.9375em rgba(0, 0, 0, 0.2);
 }
 
 .nav a {
   background-color: #cb1605;
   color: #ffffff;
-  padding: 10px 16px;
-  border-radius: 8px;
+  padding: 0.625em 1em;
+  border-radius: 0.5em;
   text-decoration: none;
   font-weight: bold;
   transition:
@@ -78,19 +77,19 @@ main {
 
 #logo {
   background-color: #f8f6f6;
-  width: 110px;
-  height: 110px;
+  width: 6.875em;
+  height: 6.875em;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0.375em 0.9375em rgba(0, 0, 0, 0.2);
   transition: transform 0.3s;
   flex-shrink: 0; /* Prevents logo from squishing */
 }
 
 #logo img {
-  width: 70px;
+  width: 4.375em;
   height: auto;
 }
 
@@ -102,9 +101,9 @@ main {
 
 main {
   display: flex;
-  gap: 25px; /* Modern way to handle spacing between columns */
-  margin-top: 30px;
-  margin-bottom: 50px;
+  gap: 1.5625em; /* Modern way to handle spacing between columns */
+  margin-top: 1.875em;
+  margin-bottom: 3.125em;
 }
 
 .left {
@@ -113,11 +112,11 @@ main {
 
 .banner {
   background-color: #f8f6f6;
-  height: 300px; /* Matched to your HTML height */
-  border-radius: 16px;
+  height: 18.75em; /* Matched to your HTML height */
+  border-radius: 1em;
   overflow: hidden; /* Ensures image doesn't bleed over rounded corners */
-  margin-bottom: 25px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  margin-bottom: 1.5625em;
+  box-shadow: 0 0.5em 1.25em rgba(0, 0, 0, 0.15);
   transition: transform 0.3s;
 }
 
@@ -128,28 +127,28 @@ main {
 }
 
 .banner:hover {
-  transform: translateY(-4px);
+  transform: translateY(-0.25em);
 }
 
 .subheading {
   background-color: #cb1605;
   color: white;
-  padding: 5px 20px;
-  border-radius: 12px;
-  margin-bottom: 20px;
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  padding: 0.3125em 1.25em;
+  border-radius: 0.75em;
+  margin-bottom: 1.25em;
+  box-shadow: 0 0.375em 0.9375em rgba(0, 0, 0, 0.2);
 }
 
 .info {
   background-color: #f8f6f6;
-  padding: 22px;
-  border-radius: 16px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  padding: 1.375em;
+  border-radius: 1em;
+  box-shadow: 0 0.5em 1.25em rgba(0, 0, 0, 0.15);
 }
 
 /* Space out list items now that <br> tags are gone */
 ul li {
-  margin-bottom: 12px;
+  margin-bottom: 0.75em;
 }
 
 /* ===== SIDEBARS ===== */
@@ -159,7 +158,7 @@ ul li {
   flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 25px;
+  gap: 1.5625em;
 }
 
 /* Applying styles to both sidebar classes */
@@ -171,14 +170,14 @@ ul li {
 .funfacts,
 .geography {
   background-color: #f8f6f6;
-  padding: 20px;
-  border-radius: 16px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  padding: 1.25em;
+  border-radius: 1em;
+  box-shadow: 0 0.5em 1.25em rgba(0, 0, 0, 0.15);
   transition: transform 0.3s;
   height: 100%;
 }
 
 .funfacts:hover,
 .geography:hover {
-  transform: translateY(-4px);
+  transform: translateY(-0.25em);
 }
