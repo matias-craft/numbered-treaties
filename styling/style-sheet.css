@@ -4,6 +4,11 @@ body {
   /* Light background color - adjusted for better browser compatibility */
   background-color: oklch(98% 0.01 271);
   color: #0e0e0e;
+  font-size: clamp(
+    0.9rem,
+    1vw + 0.5rem,
+    1.2rem
+  ); /* Fluid typography - scales with viewport */
   line-height: 1.6; /* Improves readability */
 }
 
@@ -21,6 +26,7 @@ main {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap; /* Allows items to wrap on small screens */
   margin-top: 1.25em;
   gap: 0.9375em; /* Adds consistent spacing between flex items */
 }
@@ -32,6 +38,7 @@ main {
   border-radius: 0.75em;
   box-shadow: 0 0.375em 0.9375em rgba(0, 0, 0, 0.3);
   flex: 2;
+  min-width: 12em; /* Prevents it from getting too squished */
   transition: transform 0.3s;
 }
 
@@ -51,7 +58,9 @@ main {
   padding: 0.875em;
   border-radius: 0.75em;
   flex: 3;
+  min-width: 12em; /* Prevents it from getting too squished */
   display: flex;
+  flex-wrap: wrap; /* Nav links wrap instead of overflow */
   gap: 0.75em;
   box-shadow: 0 0.375em 0.9375em rgba(0, 0, 0, 0.2);
 }
@@ -77,8 +86,8 @@ main {
 
 #logo {
   background-color: #f8f6f6;
-  width: 6.875em;
-  height: 6.875em;
+  width: clamp(4em, 8vw, 6.875em); /* Shrinks fluidly with viewport */
+  height: clamp(4em, 8vw, 6.875em);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -89,7 +98,7 @@ main {
 }
 
 #logo img {
-  width: 4.375em;
+  width: 65%; /* Scales relative to logo container */
   height: auto;
 }
 
@@ -101,6 +110,7 @@ main {
 
 main {
   display: flex;
+  flex-wrap: wrap; /* Columns stack on small screens */
   gap: 1.5625em; /* Modern way to handle spacing between columns */
   margin-top: 1.875em;
   margin-bottom: 3.125em;
@@ -108,11 +118,12 @@ main {
 
 .left {
   flex: 3;
+  min-width: 18em; /* Collapses to full width below this */
 }
 
 .banner {
   background-color: #f8f6f6;
-  height: 18.75em; /* Matched to your HTML height */
+  height: clamp(10em, 25vw, 18.75em); /* Fluid height - shrinks with viewport */
   border-radius: 1em;
   overflow: hidden; /* Ensures image doesn't bleed over rounded corners */
   margin-bottom: 1.5625em;
@@ -156,6 +167,7 @@ ul li {
 /* This container holds BOTH sidebars to stack them on the right */
 .sidebar-container {
   flex: 1;
+  min-width: 12em; /* Collapses to full width below this */
   display: flex;
   flex-direction: column;
   gap: 1.5625em;
@@ -180,4 +192,38 @@ ul li {
 .funfacts:hover,
 .geography:hover {
   transform: translateY(-0.25em);
+}
+
+/* ===== RESPONSIVE BREAKPOINTS ===== */
+
+/* Tablet - stack sidebar below main content */
+@media (max-width: 48em) {
+  .top {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  #logo {
+    align-self: center;
+  }
+
+  main {
+    flex-direction: column;
+  }
+
+  .sidebar-container {
+    flex-direction: row; /* Sidebars sit side by side on tablet */
+    flex-wrap: wrap;
+  }
+}
+
+/* Mobile - single column everything */
+@media (max-width: 30em) {
+  .sidebar-container {
+    flex-direction: column;
+  }
+
+  .nav {
+    justify-content: center;
+  }
 }
