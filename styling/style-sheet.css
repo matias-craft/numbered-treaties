@@ -1,34 +1,33 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  /* Light background color - adjusted for better browser compatibility */
+  /* Light background color, adjusted for better browser compatibility */
   background-color: oklch(98% 0.01 271);
   color: #0e0e0e;
   font-size: clamp(
     0.9rem,
     1vw + 0.5rem,
     1.2rem
-  ); /* Fluid typography - scales with viewport */
-  line-height: 1.6; /* Improves readability */
+  ); /* Fluid typography that scales with the viewport width */
+  line-height: 1.6; /* Adds breathing room between lines to improve readability */
 }
 
 /* Main page container */
 header,
 main {
   width: 90%;
-  max-width: 75rem; /* Prevents site from getting too wide on huge monitors */
+  max-width: 75rem; /* Stops the site from stretching too wide on large monitors */
   margin: auto;
 }
 
-/* ===== TOP SECTION LAYOUT ===== */
-
+/* Top section layout */
 .top {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  flex-wrap: wrap; /* Allows items to wrap on small screens */
+  flex-wrap: wrap; /* Lets items wrap onto the next line on smaller screens */
   margin-top: 1.25em;
-  gap: 0.9375em; /* Adds consistent spacing between flex items */
+  gap: 0.9375em; /* Adds consistent spacing between each flex item */
 }
 
 .heading {
@@ -38,29 +37,28 @@ main {
   border-radius: 0.75em;
   box-shadow: 0 0.375em 0.9375em rgba(0, 0, 0, 0.3);
   flex: 2;
-  min-width: 12em; /* Prevents it from getting too squished */
+  min-width: 12em; /* Prevents the heading box from getting too squished */
   transition: transform 0.3s;
 }
 
 .heading h1,
 .heading p {
-  margin: 0; /* Removes default margins to keep box tight */
+  margin: 0; /* Removes default margins to keep the box tight */
 }
 
 .heading:hover {
   transform: translateY(-0.1875em);
 }
 
-/* ===== NAVIGATION BAR ===== */
-
+/* Navigation bar */
 .nav {
   background-color: #f8f6f6;
   padding: 0.875em;
   border-radius: 0.75em;
   flex: 3;
-  min-width: 12em; /* Prevents it from getting too squished */
+  min-width: 12em; /* Prevents the nav from getting too squished */
   display: flex;
-  flex-wrap: wrap; /* Nav links wrap instead of overflow */
+  flex-wrap: wrap; /* Nav links wrap instead of overflowing */
   gap: 0.75em;
   box-shadow: 0 0.375em 0.9375em rgba(0, 0, 0, 0.2);
 }
@@ -82,11 +80,10 @@ main {
   transform: scale(1.05);
 }
 
-/* ===== LOGO STYLING ===== */
-
+/* Logo styling */
 #logo {
   background-color: #f8f6f6;
-  width: clamp(4em, 8vw, 6.875em); /* Shrinks fluidly with viewport */
+  width: clamp(4em, 8vw, 6.875em); /* Shrinks fluidly as the viewport gets smaller */
   height: clamp(4em, 8vw, 6.875em);
   border-radius: 50%;
   display: flex;
@@ -94,38 +91,37 @@ main {
   justify-content: center;
   box-shadow: 0 0.375em 0.9375em rgba(0, 0, 0, 0.2);
   transition: transform 0.3s;
-  flex-shrink: 0; /* Prevents logo from squishing */
+  flex-shrink: 0; /* Stops the logo from squishing when space is tight */
 }
 
 #logo img {
-  width: 65%; /* Scales relative to logo container */
+  width: 65%; /* Scales relative to the logo container */
   height: auto;
 }
 
 #logo:hover {
-  transform: rotate(5deg) scale(1.05); /* Added a slight tilt for fun */
+  transform: rotate(5deg) scale(1.05); /* Adds a slight tilt for a fun hover effect */
 }
 
-/* ===== MAIN CONTENT LAYOUT ===== */
-
+/* Main content layout */
 main {
   display: flex;
-  flex-wrap: wrap; /* Columns stack on small screens */
-  gap: 1.5625em; /* Modern way to handle spacing between columns */
+  flex-wrap: wrap; /* Columns stack on top of each other on small screens */
+  gap: 1.5625em; /* Handles spacing between the columns */
   margin-top: 1.875em;
   margin-bottom: 3.125em;
 }
 
 .left {
   flex: 3;
-  min-width: 18em; /* Collapses to full width below this */
+  min-width: 18em; /* Collapses to full width below this size */
 }
 
 .banner {
   background-color: #f8f6f6;
-  height: clamp(10em, 25vw, 18.75em); /* Fluid height - shrinks with viewport */
+  height: clamp(10em, 25vw, 18.75em); /* Fluid height that shrinks with the viewport */
   border-radius: 1em;
-  overflow: hidden; /* Ensures image doesn't bleed over rounded corners */
+  overflow: hidden; /* Stops the image from bleeding over the rounded corners */
   margin-bottom: 1.5625em;
   box-shadow: 0 0.5em 1.25em rgba(0, 0, 0, 0.15);
   transition: transform 0.3s;
@@ -157,23 +153,22 @@ main {
   box-shadow: 0 0.5em 1.25em rgba(0, 0, 0, 0.15);
 }
 
-/* Space out list items now that <br> tags are gone */
+/* Adds space between list items now that the br tags are gone */
 ul li {
   margin-bottom: 0.75em;
 }
 
-/* ===== SIDEBARS ===== */
-
-/* This container holds BOTH sidebars to stack them on the right */
+/* Sidebars */
+/* This container holds both sidebars and stacks them on the right side */
 .sidebar-container {
   flex: 1;
-  min-width: 12em; /* Collapses to full width below this */
+  min-width: 12em; /* Collapses to full width below this size */
   display: flex;
   flex-direction: column;
   gap: 1.5625em;
 }
 
-/* Applying styles to both sidebar classes */
+/* Applies the same styles to both sidebar classes */
 .sidebar,
 .sidebar1 {
   flex: 1;
@@ -194,9 +189,8 @@ ul li {
   transform: translateY(-0.25em);
 }
 
-/* ===== RESPONSIVE BREAKPOINTS ===== */
-
-/* Tablet - stack sidebar below main content */
+/* Responsive breakpoints */
+/* Tablet view, stacks the sidebar below the main content */
 @media (max-width: 48em) {
   .top {
     flex-direction: column;
@@ -217,7 +211,7 @@ ul li {
   }
 }
 
-/* Mobile - single column everything */
+/* Mobile view, everything collapses to a single column */
 @media (max-width: 30em) {
   .sidebar-container {
     flex-direction: column;
